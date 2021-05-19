@@ -6,16 +6,16 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 01:34:55 by sulee             #+#    #+#             */
-/*   Updated: 2020/10/20 19:28:51 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/19 15:34:07 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_lstsize(t_list *lst)
+int		ft_lstsize(t_node *lst)
 {
 	int		i;
-	t_list	*curr;
+	t_node	*curr;
 
 	if (lst == NULL)
 		return (0);

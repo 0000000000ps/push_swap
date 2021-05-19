@@ -1,35 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_doub_lstadd_back.c                              :+:      :+:    :+:   */
+/*   ft_s.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/05/18 21:30:45 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/19 18:34:08 by sulee            ###   ########.fr       */
+/*   Created: 2021/05/19 18:27:45 by sulee             #+#    #+#             */
+/*   Updated: 2021/05/19 20:16:28 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-void	ft_doub_lstadd_back(t_node **lst, t_node *new)
+// void	ft_ss()
+// void	ft_sb()
+void	ft_sa(t_list *s)
 {
-	t_node *node;
-
-	if (new == NULL)
-		return ;
-	if (*lst == NULL)
+	
+	if (!s->stack_b)
 	{
-		*lst = new;
-		new->next = NULL;
+		ft_lstnew()
 	}
-	if (*lst)
+	else
 	{
-		node = *lst;
-		while (node->next)
-			node = node->next;
-		node->next = new;
-		new->prev = node;//이중 리스트용. 코드 한 줄 추가
-		new->next = NULL;
+		
 	}
+	s->stack_a.
 }
+/*
+	
+
+*/

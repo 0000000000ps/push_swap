@@ -6,15 +6,15 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 01:38:26 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/18 19:59:10 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/19 15:33:15 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstclear(t_list **lst, void (*del)(void*))
+void	ft_lstclear(t_node **lst, void (*del)(void*))
 {
-	t_list *tmp;
+	t_node *tmp;
 
 	if (!lst)
 		return ;

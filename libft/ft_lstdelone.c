@@ -6,15 +6,15 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 01:37:46 by sulee             #+#    #+#             */
-/*   Updated: 2020/10/24 18:22:45 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/19 15:33:23 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstdelone(t_list *lst, void (*del)(void*))
+void	ft_lstdelone(t_node *lst, void (*del)(void*))
 {
-	t_list *tmp;
+	t_node *tmp;
 
 	tmp = lst->next;
 	if (del)

@@ -1,9 +1,10 @@
 NAME = push_swap
 
+SRCS = srcs/ft_error.c
+
 all:
 	make -C ./libft
-	gcc push_swap.c ./libft/libft.a -o push_swap
-	./push_swap
+	gcc push_swap.c ./libft/libft.a $(SRCS) -o push_swap
 
 clean: 
 	rm -rf *.o

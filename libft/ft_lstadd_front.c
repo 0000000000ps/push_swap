@@ -6,13 +6,13 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 01:34:20 by sulee             #+#    #+#             */
-/*   Updated: 2020/11/30 13:38:16 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/19 15:33:08 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-void	ft_lstadd_front(t_list **lst, t_list *new)
+void	ft_lstadd_front(t_node **lst, t_node *new)
 {
 	if (new)
 		new->next = *lst;

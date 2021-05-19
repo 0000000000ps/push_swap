@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 15:05:50 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/18 21:21:58 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/19 20:17:27 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,24 +18,26 @@
 #include <stdio.h>
 #include "./libft/libft.h"
 
-typedef struct		s_node
-{
-	int				value;
-	t_node			*prev;
-	t_node			*next;
-}					t_node;
+// typedef struct		s_node
+// {
+// 	int				value;
+// 	t_node			*prev;
+// 	t_node			*next;
+// }					t_node;
 
 typedef struct		s_stack;
 {
-	t_node			node;
+	t_node			*tail;
 }					t_stack;
 
-typedef struct		s_struct
+typedef struct		s_list
 {
 	t_stack			stack_a;
 	t_stack			stack_b;
-	t_node			node;
 	int				size;
-}					t_struct;
+}					t_list;
+
+void	display(t_node *head);
+int		ft_error(char *error_msg);
 
 #endif

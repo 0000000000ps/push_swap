@@ -6,19 +6,21 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/02 16:55:03 by sulee             #+#    #+#             */
-/*   Updated: 2020/10/21 01:45:57 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/19 17:50:58 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-int		ft_atoi(const char *str)
+long long		ft_atoi(const char *str)/* int */
 {
-	int					sign;
-	unsigned long long	result;
+	long long	sign;
+	long long	result;/* unsigned long long */
 
 	sign = 1;
 	result = 0;
+	if (ft_strlen(str) > 12)
+		return (3000000000);
 	while (*str && (*str == 32 || (*str >= 9 && *str <= 13)))
 		str++;
 	if (*str && (*str == '-' || *str == '+'))
@@ -38,5 +40,6 @@ int		ft_atoi(const char *str)
 			return (0);
 		return (-1);
 	}
-	return (sign * result);
+	result *= sign;
+	return (result);
 }
