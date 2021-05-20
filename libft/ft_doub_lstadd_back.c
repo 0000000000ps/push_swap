@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 21:30:45 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/19 18:34:08 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/20 20:33:57 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,6 @@ void	ft_doub_lstadd_back(t_node **lst, t_node *new)
 			node = node->next;
 		node->next = new;
 		new->prev = node;//이중 리스트용. 코드 한 줄 추가
-		new->next = NULL;
+		new->next = *lst;
 	}
 }

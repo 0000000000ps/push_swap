@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 17:14:59 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/19 17:54:04 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/20 20:28:30 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@
 typedef struct		s_node
 {
 	void			*content;
+	struct s_node	*prev;
 	struct s_node	*next;
 }					t_node;
 

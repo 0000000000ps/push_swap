@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 15:04:24 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/19 20:48:20 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/20 20:32:03 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int		main(int ac, char **av)
 	if (ac > 1)
 	{
 		head = ft_lstnew(ft_atoi(av[1]));
-		printf("head[1]: %d\n", head->content);
+		printf("head[1]: %d\n", (int)head->content);
 		i = 2;
 		while (i < ac)
 		{
@@ -52,10 +52,12 @@ int		main(int ac, char **av)
 		if (ac > 2)
 			new_node->next = head;
 	}
+	printf("prev[3]: %d\n", (int)head->prev->content);
 	/* 스택A에 만든 연결 리스트 통째로 넣기 */
-	s.stack_a.node = head.prev;
+	s.stack_a.node = head;
 	/* 어떤 연산을 수행할 지 함수 고르기 */
-	ft_instruction(s);
+	ft_rra(&s.stack_a);
+	// ft_instruction(s);
 	return (0);
 }
 

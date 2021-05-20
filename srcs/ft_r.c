@@ -1,25 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_r.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/04 01:29:52 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/20 20:29:14 by sulee            ###   ########.fr       */
+/*   Created: 2021/05/20 20:15:21 by sulee             #+#    #+#             */
+/*   Updated: 2021/05/20 20:26:38 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "libft.h"
+#include "../push_swap.h"
 
-t_node	*ft_lstnew(void *content)
+void	ft_rr(t_list *s)
 {
-	t_node *newnode;
+	ft_ra(&s->stack_a);
+	ft_ra(&s->stack_b);
+}
 
-	if (!(newnode = (t_node *)malloc(sizeof(t_node))))
-		return (NULL);
-	newnode->content = content;
-	newnode->prev = NULL;
-	newnode->next = NULL;
-	return (newnode);
+void	ft_ra(t_stack *stack)
+{
+	// t_node	*head;
+
+	// head = stack->node;
+	// stack->node = 
+	stack->node = stack->node->next;
+
+	int i = -1;
+	while (++i < 3)
+	{
+		printf("i: %d\n", (int)stack->node->content);
+		stack->node = stack->node->next;
+	}
 }

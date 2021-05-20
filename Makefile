@@ -1,6 +1,9 @@
 NAME = push_swap
 
-SRCS = srcs/ft_error.c
+SRCS = srcs/ft_error.c \
+		srcs/ft_s.c \
+		srcs/ft_r.c \
+		srcs/ft_rr.c
 
 all:
 	make -C ./libft
