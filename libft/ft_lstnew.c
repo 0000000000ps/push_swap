@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/10/04 01:29:52 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/20 20:29:14 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/22 14:28:17 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ t_node	*ft_lstnew(void *content)
 	if (!(newnode = (t_node *)malloc(sizeof(t_node))))
 		return (NULL);
 	newnode->content = content;
-	newnode->prev = NULL;
-	newnode->next = NULL;
+	newnode->prev = newnode;
+	newnode->next = newnode;
 	return (newnode);
 }

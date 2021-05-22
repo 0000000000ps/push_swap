@@ -7,7 +7,7 @@ SRCS = srcs/ft_error.c \
 
 all:
 	make -C ./libft
-	gcc push_swap.c ./libft/libft.a $(SRCS) -o push_swap
+	gcc -g push_swap.c ./libft/libft.a $(SRCS) -o push_swap
 
 clean: 
 	rm -rf *.o

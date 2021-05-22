@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/19 18:27:45 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/20 20:12:59 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/22 14:42:56 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ void	ft_sa(t_stack *stack)
 	stack->node->next->content = tmp->content;
 
 	int i = -1;
-	while (++i < 3)
+	while (++i < 5)
 	{
 		printf("i: %d\n", (int)stack->node->content);
 		stack->node = stack->node->next;

@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/09/30 17:14:59 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/20 20:28:30 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/22 18:14:17 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,7 +68,7 @@ t_node				*ft_lstnew(void	*content);
 void				ft_lstadd_front(t_node **lst, t_node *new);
 int					ft_lstsize(t_node *lst);
 t_node				*ft_lstlast(t_node *lst);
-void				ft_doub_lstadd_back(t_node **lst, t_node *new);
+t_node				*ft_doub_lstadd_back(t_node **lst, t_node *new);
 void				ft_lstadd_back(t_node **lst, t_node *new);
 void				ft_lstdelone(t_node *lst, void (*del)(void *));
 void				ft_lstclear(t_node **lst, void (*del)(void *));

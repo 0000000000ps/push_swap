@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 15:05:50 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/20 20:30:10 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/22 16:21:08 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,7 @@ typedef struct		s_stack
 {
 	t_node			*node;
 	t_node			*tail;
+	t_node			*head;
 }					t_stack;
 
 typedef struct		s_list
@@ -42,8 +43,8 @@ typedef struct		s_list
 ** instructions
 */
 void	ft_sa(t_stack *stack);
-void	ft_ra(t_stack *stack);
-void	ft_rra(t_stack *stack);
+void	ft_ra(t_stack *stack, t_list *s);
+void	ft_rra(t_stack *stack, t_list *s);
 
 void	display(t_node *head);
 int		ft_error(char *error_msg);
