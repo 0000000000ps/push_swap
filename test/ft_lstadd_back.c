@@ -1,25 +1,34 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstnew.c                                        :+:      :+:    :+:   */
+/*   ft_lstadd_back.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/10/04 01:29:52 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/22 18:25:00 by sulee            ###   ########.fr       */
+/*   Created: 2020/10/04 01:36:22 by sulee             #+#    #+#             */
+/*   Updated: 2021/05/19 15:32:59 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-t_node	*ft_lstnew(void *content)
+void	ft_lstadd_back(t_node **lst, t_node *new)
 {
-	t_node *newnode;
+	t_node *node;
 
-	if (!(newnode = (t_node *)malloc(sizeof(t_node))))
-		return (NULL);
-	newnode->content = content;
-	// newnode->prev = newnode;
-	newnode->next = newnode;
-	return (newnode);
+	if (new == NULL)
+		return ;
+	if (*lst == NULL)
+	{
+		*lst = new;
+		new->next = NULL;
+	}
+	if (*lst)
+	{
+		node = *lst;
+		while (node->next)
+			node = node->next;
+		node->next = new;
+		new->next = NULL;
+	}
 }

@@ -6,7 +6,7 @@
 /*   By: sulee <sulee@student.42seoul.kr>           +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/05/18 15:04:24 by sulee             #+#    #+#             */
-/*   Updated: 2021/05/22 18:21:47 by sulee            ###   ########.fr       */
+/*   Updated: 2021/05/22 21:00:30 by sulee            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,6 +40,7 @@ int		main(int ac, char **av)
 	int			i;
 	long long	value;
 	t_list		s;
+	t_node		*new_node;
 
 	i = 0;
 	while (++i < ac)
@@ -61,21 +62,20 @@ int		main(int ac, char **av)
 		while (i < ac)
 		{
 			printf("?1\n");
-			s.stack_a.node = ft_lstnew(ft_atoi(av[i]));
-			printf("?2 %s, %d\n", av[i], ft_atoi(av[i]));
-			s.stack_a.node = ft_doub_lstadd_back(&s.stack_a.head, s.stack_a.node);
-			printf("?3\n");
-			printf("content[%d]: %d %p\n", i, (int)s.stack_a.node->content, s.stack_a.node);
+			new_node = ft_lstnew(ft_atoi(av[i]));
+			printf("?2 %s\n", av[i]);
+			ft_doub_lstadd_back(s.stack_a.head, new_node);
+			printf("?3????\n");
+			// printf("content[%d]: %d\n", i, (int)s.stack_a.node->content);
 			printf("?4\n");
-			printf("prev content[%d]: %d\n", i, (int)s.stack_a.node->prev->content); 
-			s.stack_a.node = s.stack_a.node->next;
+			if (i == ac - 1)
+			{
+				printf(".....%d\n", s.stack_a.node->next->content);
+				s.stack_a.tail = s.stack_a.node->next;
+			}
+			// s.stack_a.node = s.stack_a.node->next;
 			i++;
 			s.size++;
-		}
-		if (ac > 2)
-		{
-			s.stack_a.tail = s.stack_a.head->prev;
-			printf("head tail %d %d %d\n", s.stack_a.head->content, s.stack_a.node->content, s.stack_a.tail->content);
 		}
 		printf("-------------------\n");
 		int j = 0;//=====================================test
@@ -89,9 +89,8 @@ int		main(int ac, char **av)
 		init_stack_b(&s);
 	}
 	printf("size: %d\n", s.size);
-	printf("prev[3]: %d\n", (int)s.stack_a.head->prev->content);
 	/* 어떤 연산을 수행할 지 함수 고르기 */
-	ft_rra(&s.stack_a, &s);
+	ft_sa(&s.stack_a);
 	// ft_instruction(s);
 	return (0);
 }
